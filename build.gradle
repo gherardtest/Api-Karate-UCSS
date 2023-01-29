@@ -12,6 +12,12 @@ dependencies{
     testImplementation 'com.intuit.karate:karate-junit5:1.2.0.RC5'
     testImplementation 'net.masterthought:cucumber-reporting:5.7.0'
     testImplementation 'io.cucumber:cucumber-java:6.10.4'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'junit:junit:4.13.2'
 }
 
 test{
@@ -24,6 +30,7 @@ sourceSets{
         resources{
             srcDir file('src/test/java')
             exclude '**/*.java'
+            exclude 'src/test/scala'
         }
     }
 }
