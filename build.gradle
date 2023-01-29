@@ -11,7 +11,7 @@ repositories {
 dependencies{
     testImplementation 'com.intuit.karate:karate-junit5:1.2.0.RC5'
     testImplementation 'net.masterthought:cucumber-reporting:3.8.0'
-    testImplementation 'io.cucumber:cucumber-java:6.10.4'
+    //testImplementation 'io.cucumber:cucumber-java:6.10.4'
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
