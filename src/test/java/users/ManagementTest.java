@@ -14,14 +14,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-@CucumberOptions(
-        features = "src/test/java/users",
-format = {"json:target/cucumber.json"})
+@KarateOptions(features = {"classpath:users"})
 public class ManagementTest {
     @Test
     void testParallel(){
         System.out.println("getClass:" + getClass());
-        Results results = Runner.parallel(getClass(),1,"target/karate-report");
+        Results results = Runner.parallel(getClass(),1,"target/surefire-reports");
               //Runner.path("classpath:users").outputCucumberJson(true).tags("~@ignore").parallel(4);
         generateReport(results.getReportDir());
     }
